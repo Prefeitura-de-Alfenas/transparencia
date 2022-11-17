@@ -1,0 +1,168 @@
+* {
+	padding: 0;
+	margin: 0;	
+	box-sizing: border-box;
+}
+body {    
+    width: 100vw;  
+}
+.topo{
+	top: 0;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    background-color: #3B75C2;
+    font-family: montserrat;
+}
+.topo a{
+    height: 100px;
+}
+nav ul {
+    float: right;
+	margin-right: 20px;
+    box-sizing: border-box;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 100px;
+	margin: 0 5px;
+}
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+    text-decoration: none;
+	list-style: none;
+}
+nav ul li a.active, nav ul li a:hover {
+	background: #64abf4;
+    color: white;
+	transition: .5s;
+}
+.checkbtn {
+	float: right;
+	line-height: 100px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+@media (max-width: 858px){
+ 	.checkbtn {
+		display: block;
+	}
+	ul{  
+        z-index: 100;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #3B75C2;        
+		top: 100px;
+		right: calc(-100% - 20px);
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	nav ul li a:hover,nav ul li a.active {
+		background: none;
+		color:#64abf4;
+	}
+	#check:checked ~ ul {
+		right: -20px;
+	}
+}
+main {
+    width: 98vw;
+	top: 105px;
+    margin: 15px;
+    position: relative;
+}
+.logoBrasao{
+    position:relative;     
+    top: 0;
+    height: 110px;
+    background: #3B75C2;
+    padding: 0 0 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0 0 0);
+   
+}
+h3{
+    width: 98%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;    
+    position: relative;
+    font-size: 18px;
+    color: #5b5f66;
+    padding: 1em;
+    margin: 1.5em auto;   
+}
+h3::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 6px;
+    background-color: #ED3237;
+    bottom: -2px;
+    z-index: 1;
+}
+h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 1px;
+    background-color: #ccc;
+    bottom: 0;
+}
+.menu{	
+	display: flex;
+	justify-content:center;
+	flex-wrap: wrap;
+	margin: 5px auto;	
+}
+.menu a{
+	color: #5b5f66;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	margin:5px 10px ;
+}
+.item{	
+    max-width: 430px;
+	min-width: 430px;
+	min-height: 30px;
+    box-sizing:border-box;  
+    position: relative;
+    vertical-align:middle;
+    background: rgb(240, 240, 240);
+    border-radius: 3px;        
+    padding: 10px;   
+	transition: all 0,5s ease;
+}
+.item:hover{  
+    background:#3B75C2;
+	color: white;
+    
+}
