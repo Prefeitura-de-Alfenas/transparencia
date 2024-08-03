@@ -262,3 +262,68 @@ main{
 	padding: 2em;
     margin: 0 2em;
 }
+
+.main-top{
+	top: 120px;
+	text-align: center;
+	position: relative;
+}
+
+.dados-aberto-info p{
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    font-size: 14px;
+    color: #5b5f66;
+    margin: 1em auto;
+}
+
+.documentacao-informacao{
+	text-align: left;
+	position: relative;
+	
+}
+.documentacao-informacao h2{
+	margin-top:2rem;
+	margin-bottom:1rem;
+}
+.documentacao-informacao-line{
+	border:1px solid #ccdd;
+    overflow: hidden;
+	border-radius: 8px;
+    display:flex;
+	margin-bottom:1rem;
+	
+}
+
+.documentacao-informacao-get{
+	padding:1rem 2.8rem 1rem 1rem;
+	background-color:#215bdddd;
+	max-width:0.5rem;
+	max-height:0.5rem;
+	border-radius: 8px;
+	margin: 0.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+}
+.documentacao-informacao-get p{
+	color: white;
+    font-size: 14px;
+    font-weight: 400;
+	margin-left: 1.4rem;	
+	text-align: center;
+}
+.documentacao-informacao-line-text{
+	color: black;
+    font-size: 18px;
+    font-weight: 500;
+   margin-left:0.5rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
