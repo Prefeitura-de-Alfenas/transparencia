@@ -25,6 +25,12 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text"></p>
+      </div>
+    </div>
     <header>
       <div class="topo">
         <a href="../../Home/Index.html">
@@ -114,6 +120,27 @@
             </div>       
           </a>
         </div>
+
+        <div class="desclassificado">               
+          
+              <h3>Informações Classificadas e Desclassificadas - SIC</h3>
+              <div class="modalclick">          
+                2021
+              </div>    
+              <div class="modalclick">          
+                2022
+              </div> 
+              <div class="modalclick">          
+                2023
+              </div> 
+              <div class="modalclick">          
+                2024
+              </div>    
+          </a>
+          <p>
+             Clica no ANO para ver as informações.
+          </p>
+        </div>
       </div>                 
   </main>        
 
@@ -135,7 +162,60 @@
           $('.menu-btn').css("visibility", "visible");
         });
 
+        $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
       });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+
+      // Modal handling
+      // Existing code for menu interactions
+  $('.sub-btn').click(function(){
+    $(this).next('.sub-menu').slideToggle();
+    $(this).find('.dropdown').toggleClass('rotate');
+  });
+
+  $('.menu-btn').click(function(){
+    $('.side-bar').addClass('active');
+    $('.menu-btn').css("visibility", "hidden");
+  });
+
+  $('.close-btn').click(function(){
+    $('.side-bar').removeClass('active');
+    $('.menu-btn').css("visibility", "visible");
+  });
+
+  // Modal handling
+  var modal = $('#myModal');
+  var span = $('.close');
+
+  $('.modalclick').click(function() {
+    var year = $(this).text().trim();
+    var modalText = "Nenhuma informação foi classificada com grau de sigilo no período<br>Nenhuma informação foi desclassificada no período";
+    $('#modal-text').html(modalText); // Use .html() instead of .text() to render HTML tags
+    modal.show();
+  });
+
+  span.click(function() {
+    modal.hide();
+  });
+
+  $(window).click(function(event) {
+    if ($(event.target).is(modal)) {
+      modal.hide();
+    }
+  });
+
+          });
     </script>       
   </body>
 </html>

@@ -180,6 +180,16 @@ main{
 	margin: 1em auto;
 	padding: 1em 1em;
 }
+
+.desclassificado{
+	max-width: 450px;
+	min-width: 400px;
+	background: rgb(245, 245, 245);
+	border-radius: 3px;
+	text-align: center;   
+	margin: 1em auto;
+	padding: 1em 1em;
+}
 #FrameSol2{
 	display: inline-block;
 	max-width: 400px;
@@ -188,6 +198,15 @@ main{
 	text-align: center;         
 	margin: 1em auto;
 	padding: 1em 1em;
+}
+#ilegibleContainer{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	padding:2rem;
+
 }
 .item2{	
     max-width: 350px;
@@ -204,6 +223,8 @@ main{
 	margin: 10px auto;
 	transition: all 0,5s ease;
 }
+
+
 .item2:hover{  
     background:#3B75C2;
 	color: white;
@@ -327,3 +348,55 @@ main{
 	justify-content: center;
 }
 
+/* Modal styling */
+.modal {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; 
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%; 
+  }
+  
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .modalclick{	
+    max-width: 350px;
+	min-width: 350px;
+	min-height: 30px;
+    box-sizing:border-box;  
+    position: relative;
+	text-align: center;
+	vertical-align:middle;
+    background: #5B9EE3;
+	color: white;
+    border-radius: 3px;        
+    padding: 10px;   
+	margin: 10px auto;
+	transition: all 0,5s ease;
+	cursor: pointer;
+}
